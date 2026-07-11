@@ -1,0 +1,55 @@
+{
+  "mcpServers": {
+    "gtasks": {
+      "command": "C:\\Users\\sass\\.bun\\bin\\bun.exe",
+      "args": [
+        "run",
+        "C:\\Users\\sass\\Documents\\GitHub\\gtasks-mcp\\src\\index.ts"
+      ]
+    }
+  },
+  "coworkUserFilesPath": "C:\\Users\\sass\\Claude",
+  "preferences": {
+    "launchPreviewPersistedWorkspaces": [],
+    "launchPreviewSessionScopedSessions": [],
+    "coworkScheduledTasksEnabled": true,
+    "coworkHipaaRestricted": false,
+    "ccdScheduledTasksEnabled": true,
+    "sidebarMode": "chat",
+    "bypassPermissionsGateByAccount": {
+      "a3be5641-ab53-4113-8bfa-e50823aa3063": false
+    },
+    "coworkWebSearchEnabled": true,
+    "coworkModelAutoFallbackByAccount": {
+      "a3be5641-ab53-4113-8bfa-e50823aa3063": true
+    },
+    "coworkOnboardingResumeStep": null,
+    "remoteToolsDeviceName": "desktop-3gupv6h",
+    "epitaxyPrefs": {
+      "starred-local-code-sessions": [],
+      "starred-cowork-spaces": [],
+      "starred-session-groups": [],
+      "dframe-local-slice": {
+        "pinnedOrder": [],
+        "customGroupAssignments": {},
+        "customGroupOrder": {}
+      },
+      "ccd-sessions-filter": {
+        "state": {
+          "selectedProjects": []
+        },
+        "version": 0
+      },
+      "desktop-frame.paneStore.v1": {
+        "state": {
+          "extraPanesByMode": {},
+          "colWeightsByMode": {},
+          "rowSplit": 0.5,
+          "draftNonce": 0
+        },
+        "version": 4
+      }
+    },
+    "keepAwakeEnabled": true
+  }
+}

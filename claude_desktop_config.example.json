@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "gtasks": {
+      "command": "C:\\Users\\sass\\.bun\\bin\\bun.exe",
+      "args": [
+        "run",
+        "C:\\Users\\sass\\Documents\\GitHub\\gtasks-mcp\\src\\index.ts"
+      ]
+    }
+  }
+}

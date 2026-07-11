@@ -20,7 +20,7 @@ const tasks = google.tasks("v1");
 
 const server = new Server(
   {
-    name: "example-servers/gtasks",
+    name: "gtasks",
     version: "0.1.0",
   },
   {
@@ -290,8 +290,25 @@ async function loadCredentialsAndRunServer() {
   }
 
   const credentials = JSON.parse(fs.readFileSync(credentialsPath, "utf-8"));
-  const auth = new google.auth.OAuth2();
+  const keysPath = path.join(
+    path.dirname(fileURLToPath(import.meta.url)),
+    "../gcp-oauth.keys.json",
+  );
+  const keys = JSON.parse(fs.readFileSync(keysPath, "utf-8"));
+  const keyConfig = keys.installed || keys.web;
+  // client_id/client_secret are required for the OAuth2 client to be able to
+  // refresh the access token once it expires (~1h)
+  const auth = new google.auth.OAuth2(
+    keyConfig.client_id,
+    keyConfig.client_secret,
+  );
   auth.setCredentials(credentials);
+  auth.on("tokens", (tokens) => {
+    fs.writeFileSync(
+      credentialsPath,
+      JSON.stringify({ ...credentials, ...tokens }),
+    );
+  });
   google.options({ auth });
 
   const transport = new StdioServerTransport();
