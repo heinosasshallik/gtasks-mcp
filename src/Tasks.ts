@@ -4,8 +4,8 @@ import {
   ListResourcesRequest,
   ReadResourceRequest,
 } from "@modelcontextprotocol/sdk/types.js";
-import { GaxiosResponse } from "gaxios";
-import { tasks_v1 } from "googleapis";
+import type { GaxiosResponse } from "gaxios";
+import type { tasks_v1 } from "googleapis";
 
 const MAX_TASK_RESULTS = 100;
 

@@ -1,0 +1,8 @@
+name = "gtasks-mcp"
+main = "src/worker.ts"
+compatibility_date = "2026-10-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Request logs aren't needed; keep them off
+[observability]
+enabled = false
